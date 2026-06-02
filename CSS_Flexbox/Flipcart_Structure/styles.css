@@ -95,28 +95,77 @@ nav {
 }
 
 #bottom-nav {
-    display: flex;
-    gap: 10px;
-
     width: 100%;
-    height: 50px;
 
-    padding: 5px;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    background-color: rgb(213, 206, 206);
+    gap: 20px;
+    padding: 10px 0;
 }
 
-.btn-box {
-    width: 70%;
-    height: 80%;
-    background-color: aquamarine;
+.search-box {
+    flex: 1;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 20px;
+
+    background-color: white;
+    border: 2px solid #2874f0;
+    border-radius: 15px;
 }
 
-.login-box {
-    width: 25%;
-    height: 80%;
-    background-color: rgb(134, 233, 114);
+.search-box i {
+    font-size: 18px;
+    color: #666;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #666;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #f1f3f6;
+}
+
+.nav-item i {
+    font-size: 18px;
+}
+
+.nav-item span {
+    font-size: 15px;
+    font-weight: 500;
 }
 
 /* =========================
@@ -316,43 +365,150 @@ footer {
 }
 
 
-
-
-/* Footer */
-
-.footer {
-    margin-top: 8rem;
+/* ===== FOOTER ===== */
+footer {
     background-color: #172337;
-    color: white;
-    padding-top: 30px;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: sans-serif;
+    width: 100%;
+    margin-top: 7rem;
 }
 
-.footer-container {
+.footer-top {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    gap: 32px;
+    padding: 40px 48px 32px;
+    border-bottom: 1px solid #2e4057;
+    flex-wrap: wrap;
 }
 
-.footer-section {
-    display: flex;
-    flex-direction: column;
+.footer-col {
+    flex: 1;
+    min-width: 120px;
 }
 
-.footer-section h4 {
-    color: gray;
-    font-size: 14px;
+.footer-col h4,
+.footer-address h4 {
+    color: #878787;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
-.footer-section a {
-    color: white;
+.footer-col a {
+    display: block;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.footer-address {
+    flex: 1.5;
+    min-width: 180px;
+}
+
+.footer-address p {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 0 0 4px;
+}
+
+.footer-address a {
+    color: #2874f0;
+    text-decoration: none;
+}
+
+.footer-address a:hover {
+    text-decoration: underline;
+}
+
+.footer-address h4 {
+    margin-top: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 8px;
     margin-top: 8px;
+}
+
+.footer-social a {
+    background-color: #2e4057;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
     font-size: 14px;
+}
+
+.footer-social a:hover {
+    background-color: #3d5a7a;
 }
 
 .footer-bottom {
-    text-align: center;
-    padding: 15px;
-    border-top: 1px solid gray;
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 48px;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: #0f1c2d;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+    color: #878787;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-bottom-links a:hover {
+    color: #ffffff;
+}
+
+.footer-copyright {
+    color: #878787;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-payments {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.pay-badge {
+    background-color: #ffffff;
+    color: #172337;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    height: 22px;
+    display: flex;
+    align-items: center;
 }
