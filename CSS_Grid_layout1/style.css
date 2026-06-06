@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    padding: 30px;
+}
+
+.grid {
+    max-width: 900px;
+    margin: auto;
+
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: 1fr 1fr 1fr;
+   
+
+    grid-template-areas:
+        "custom scheduling scheduling"
+        "custom wallet inbox"
+        "gifts gifts reminders";
+}
+
+.card {
+    border-radius: 30px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* COLORS */
+.customization {
+    background: #cfc5ff;
+    grid-area: custom;
+}
+
+.scheduling {
+    background: #f7a2c2;
+    grid-area: scheduling;
+}
+
+.wallet {
+    background: #cfe98d;
+    grid-area: wallet;
+}
+
+.inbox {
+    background: #ffe36d;
+    grid-area: inbox;
+}
+
+.gifts {
+    background: #ffc59a;
+    grid-area: gifts;
+}
+
+.reminders {
+    background: #d7edf5;
+    grid-area: reminders;
+}
+
+/* TEXT */
+h2 {
+    margin-bottom: 15px;
+    color: #3b2a3d;
+}
+
+p {
+    margin-top: 15px;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* CUSTOMIZATION IMAGES */
+.custom-image {
+    position: relative;
+    height: 220px;
+}
+
+.img1,
+.img2 {
+    position: absolute;
+    width: 130px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.img1 {
+    left: 20px;
+    top: 30px;
+    transform: rotate(-10deg);
+}
+
+.img2 {
+    left: 120px;
+    top: 10px;
+    transform: rotate(8deg);
+}
+
+/* SCHEDULING IMAGE */
+.schedule-img img {
+    width: 200px;
+    border-radius: 15px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* WALLET */
+.wallet-card {
+    background: #222;
+    color: #fff;
+    padding: 18px;
+    border-radius: 18px;
+    font-size: 28px;
+    margin: 20px 0;
+    width: 160px;
+}
+
+/* INBOX */
+.chat-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.chat-box div {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* GIFT CARDS (IMAGES ONLY) */
+.gift-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.gift-item {
+    background: #fff;
+    border-radius: 12px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gift-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* PHONE IMAGE */
+.phone img {
+    width: 160px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "custom"
+            "scheduling"
+            "wallet"
+            "inbox"
+            "gifts"
+            "reminders";
+    }
+
+    .schedule-img img {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+    }
+}

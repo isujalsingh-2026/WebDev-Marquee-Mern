@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy, sans-serif;
+}
+
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100px 80% 100px;
+    grid-template-rows: 80px 1fr 40px;
+    grid-template-areas:
+       'header1 header1 header1'
+       'nav content sidebar'
+       'nav footer footer';
+}
+
+header,
+aside,
+main,
+footer,
+nav {
+    background-color: yellow;
+    color: black;
+    border: darkblue 1px solid;
+}
+
+header {
+    grid-area: header1;
+}
+aside {
+    grid-area: sidebar;
+}
+main {
+    grid-area: content;
+}
+footer {
+    grid-area: footer;
+}
+nav {
+    grid-area: nav;
+}
